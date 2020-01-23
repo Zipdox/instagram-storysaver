@@ -3,7 +3,13 @@
   "version": "0.1.0",
   "description": "Server that automatically downloads stories from Instagram users you follow.",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "inquirer": "^7.0.3",
+    "instagram-private-api": "^1.37.1",
+    "node-schedule": "^1.3.2",
+    "request-promise": "^4.2.5"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -9,6 +9,8 @@ const cmdArgs = process.argv.slice(2);
 const igUser = cmdArgs[0];
 const igPass = cmdArgs[1];
 
+if(!fs.existsSync('download/')) fs.mkdir('download');
+
 var refreshSchedule;
 var ig;
 
@@ -32,8 +34,7 @@ var ig;
     ]);
     console.log(await ig.challenge.sendSecurityCode(code));
   }).catch(e => console.log('Could not resolve checkpoint:', e, e.stack)).then(async () => {
-
-    refreshSchedule = schedule.scheduleJob('0 * * * *', async function(fireDate){
+    refreshSchedule = schedule.scheduleJob('52 * * * *', async function(fireDate){
       console.log(`Refreshing Instagram, scheduled for ${fireDate}, at ${new Date()}`);
       const reelsTray = await ig.feed.reelsTray().request();
       const wholeReelsTray = reelsTray.tray;
