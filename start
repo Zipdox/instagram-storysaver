@@ -1,0 +1,4 @@
+read -p 'Username: ' uservar
+read -sp 'Password: ' passvar
+echo
+node index.js $uservar $passvar

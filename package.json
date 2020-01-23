@@ -1,0 +1,13 @@
+{
+  "name": "instagram-storysaver",
+  "version": "0.1.0",
+  "description": "Server that automatically downloads stories from Instagram users you follow.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zipdox",
+  "license": "GPL-2.0"
+}
